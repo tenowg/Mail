@@ -1,0 +1,9 @@
+name: Mail
+version: 1.0-SNAPSHOT b0
+description: Mail for Spout
+author: tenowg
+website: http://none.right.now.com
+
+main: com.thedemgel.mail.Mail
+load: startup
+platform: BOTH
