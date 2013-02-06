@@ -19,7 +19,7 @@ public class MailWidget extends GUIWidget {
 	@Override
 	public void init(Widget mail, HUDComponent hud) {
 		super.init(mail, hud);
-		widget.setGeometry(new Rectangle(.1f, 0.80f, 0, 0));
+		widget.getTransform().add(0.1f, 0.80f);
 		
 		final RenderPartsHolderComponent mailRect = widget.add(RenderPartsHolderComponent.class);
 		final RenderPart mailBgRect = new RenderPart();
