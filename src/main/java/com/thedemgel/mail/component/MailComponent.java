@@ -16,7 +16,7 @@ import java.util.logging.Level;
 import org.spout.api.Spout;
 import org.spout.api.component.type.EntityComponent;
 import org.spout.api.entity.Player;
-import org.spout.vanilla.plugin.component.player.HUDComponent;
+import org.spout.vanilla.component.entity.player.HUD;
 
 public class MailComponent extends EntityComponent {
 
@@ -28,7 +28,7 @@ public class MailComponent extends EntityComponent {
 
 	@Override
 	public void onAttached() {
-		getOwner().get(HUDComponent.class).setDefault(MailWidget.class);
+		getOwner().get(HUD.class).setDefault(MailWidget.class);
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class MailComponent extends EntityComponent {
 			}
 		}
 		
-		getOwner().get(HUDComponent.class).getWidget(MailWidget.class).update();
+		getOwner().get(HUD.class).getWidget(MailWidget.class).update();
 	}
 
 	public void retrieveMessages() {

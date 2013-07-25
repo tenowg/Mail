@@ -3,6 +3,7 @@ package com.thedemgel.mail;
 
 import com.thedemgel.mail.component.MailComponent;
 import org.spout.api.Client;
+import org.spout.api.Platform;
 import org.spout.api.Spout;
 import org.spout.api.entity.Player;
 import org.spout.api.event.EventHandler;
@@ -10,8 +11,7 @@ import org.spout.api.event.Listener;
 import org.spout.api.event.Order;
 import org.spout.api.event.engine.EngineStartEvent;
 import org.spout.api.event.player.PlayerJoinEvent;
-import org.spout.api.plugin.Platform;
-import org.spout.vanilla.plugin.component.player.HUDComponent;
+import org.spout.vanilla.component.entity.player.HUD;
 
 
 public class PlayerListener implements Listener {
@@ -33,8 +33,8 @@ public class PlayerListener implements Listener {
 			return;
 		}
 
-		Player player = ((Client) Spout.getEngine()).getActivePlayer();
-		player.add(HUDComponent.class);
+		Player player = ((Client) Spout.getEngine()).getPlayer();
+		player.add(HUD.class);
 		player.add(MailComponent.class);
 	}
 

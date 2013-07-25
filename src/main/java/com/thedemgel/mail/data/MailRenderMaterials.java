@@ -27,9 +27,8 @@
 package com.thedemgel.mail.data;
 
 import org.spout.api.FileSystem;
+import org.spout.api.Platform;
 import org.spout.api.Spout;
-import org.spout.api.plugin.Platform;
-import org.spout.api.render.Font;
 import org.spout.api.render.RenderMaterial;
 
 public final class MailRenderMaterials {
